@@ -1,0 +1,8 @@
+ {{ range first 1 .Site.Taxonomies.categories.status }}
+
+      <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+      <p>
+        {{ .Page.Content }}
+      </p>
+
+  {{ end }}
