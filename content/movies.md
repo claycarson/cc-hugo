@@ -1,8 +1,10 @@
 ---
-title: Lists
+title: Movies
+layout: movies
+url: /movies
 ---
 
-- [Watching](/)
+- [Watching](Watching)
 	- [Movies](Movies)
 	- [Series](Series)
 - [Reading](Reading)
