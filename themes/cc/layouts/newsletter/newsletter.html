@@ -1,0 +1,47 @@
+{{ define "main" }}
+    {{ $paginator := .Paginate .Data.Pages }}
+    
+
+
+    <main class="posts">
+        <p><h1><a href="/newsletter">Newsletter</a></h1>
+I started this newsletter in January of 2018. The motivation was selfish; I was bookmarking too many articles and links that I didn't get around to reading. Filtering out my favorites to share helps me keep that list manageable. The full archive of previous editions is available <a href="#archive">below</a>.</p>
+		{{ partial "subscribe-form.html" }}
+		<hr>
+		<div class="content">
+			{{- if isset .Site.Taxonomies "categories" }}
+			{{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+			 	{{ range first 1 .Site.Taxonomies.categories.newsletter }}
+			 		<h1><a href="{{.Permalink}}">{{ .Title }}</a></h1>
+						{{ .Content }}
+				{{- end }}
+			{{- end }}
+			{{- end }}
+		</div>
+		<hr>
+		<h1><a id="archive">Archive</a></h1>
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+        {{ range $paginator.Pages.GroupByDate "2006" }}
+            <div class="posts-group">
+                <div class="post-year">{{ .Key }}</div>
+
+                <ul class="posts-list">
+                    {{ range .Pages }}
+                        <li class="post-item">
+                            <a href="{{.Permalink}}">
+                                <span class="post-title">{{.Title}}</span>
+                                <span class="post-day">
+                                    {{ .Description }}
+                                </span>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    {{ partial "pagination.html" . }}
+    </main>
+{{ end }}

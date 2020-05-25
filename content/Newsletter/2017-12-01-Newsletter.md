@@ -3,7 +3,7 @@ layout: newsletter
 title:  December 2017
 date:   2017-12-01
 categories: Newsletter
-published: false
+draft: true
 ---
 
 This newsletter is a collection of things I have found in the last month that I enjoyed, found interesting, or simply wanted to share.

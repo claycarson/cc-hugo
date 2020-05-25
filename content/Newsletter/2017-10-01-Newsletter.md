@@ -4,7 +4,7 @@ title:      October 2017
 date:       2017-10-01
 summary:    
 categories: Newsletter
-published: false
+draft: true
 ---
 
 # October 2017

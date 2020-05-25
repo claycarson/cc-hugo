@@ -4,7 +4,7 @@ title:      November 2017
 date:       2017-11-01
 summary:    
 categories: Newsletter
-published: false
+draft: true
 ---
 
 # November 2017
