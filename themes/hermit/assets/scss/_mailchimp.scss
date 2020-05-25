@@ -1,0 +1,40 @@
+// MAILCHIMP
+
+#mailchimp input {
+    border: 1px solid $light-grey;
+    color: $text;
+    margin-bottom: 0.625em;
+    padding: 0.5em 0.625em;
+    font-size: 0.8rem;
+    width: 16em;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#mailchimp input.email {
+    background: $white;
+}
+
+#mailchimp input.name {
+    background: $white;
+}
+
+#mailchimp input[type="submit"] {
+    background: $theme;
+    border: 1px solid $theme;
+    color: $white;
+    font-weight: 700;
+    cursor: pointer;
+    width: 8em;
+    padding: 0.5em 0;
+}
+#mailchimp input[type="submit"]:hover {
+    background: $text;
+    border: 1px solid $light-grey;
+    color: $white;
+    transition: color 0.2s ease;
+}

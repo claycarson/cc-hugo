@@ -1,0 +1,8 @@
+{{- if isset .Site.Taxonomies "categories" }}
+		{{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+			 	{{ range first 1 .Site.Taxonomies.categories.newsletter }}
+			 		<h1><a href="{{.Permalink}}">{{ .Title }}</a></h1>
+						{{ .Content }}
+				{{- end }}
+		{{- end }}
+		{{- end }}

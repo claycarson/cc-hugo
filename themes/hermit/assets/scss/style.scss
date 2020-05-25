@@ -2,6 +2,7 @@
 @import "normalize.scss";
 @import "syntax.scss";
 @import "animate.scss";
+@import "mailchimp.scss";
 
 html {
   background: $white;
@@ -17,7 +18,11 @@ select,
 textarea {
   color: $text;
   font-family: $fonts;
-  font-weight: 100;
+  font-weight: 200;
+}
+
+.content h1 a {
+  box-shadow: none;
 }
 
 pre,
@@ -90,8 +95,8 @@ a {
 
 hr {
   opacity: .2;
-  border-width: 0 0 5px 0;
-  border-style: dashed;
+  border-width: 0 0 1px 0;
+  border-style: solid;
   background: transparent;
   width: 50%;
   margin: 1.8em auto;
@@ -466,7 +471,7 @@ p.img-404 {
   }
 
   .post-item {
-    border-bottom: 1px $highlight-grey dashed;
+    border-bottom: 1px $light-grey solid;
 
     a {
       display: flex;
@@ -478,8 +483,10 @@ p.img-404 {
 
   .post-day {
     flex-shrink: 0;
-    margin-left: 1em;
     @include dimmed;
+    font-size: 80%;
+    width: 70%;
+    padding-left: 0em;
   }
 }
 
@@ -746,7 +753,7 @@ hr.post-end {
   padding: .8em;
   margin-top: 1.5em;
   font-size: .8rem;
-  border: 3px dashed rgba(255, 255, 255, .2);
+  border: 3px solid rgba(255, 255, 255, .2);
   border-radius: 5px;
 
   h2{

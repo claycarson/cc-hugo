@@ -14,7 +14,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 # disqusShortname = "yourdiscussshortname"
 
 [author]
-  name = "John Doe"
+  name = "Clay Carson"
 
 [blackfriday]
   # hrefTargetBlank = true
@@ -23,7 +23,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
 [taxonomies]
   tag = "tags"
-  # Categories are disabled by default.
+  category = "categories"
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -70,7 +70,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
 [menu]
 
- #  [[menu.main]]
+#  [[menu.main]]
 #     name = "Posts"
 #     url = "posts/"
 #     weight = 10
