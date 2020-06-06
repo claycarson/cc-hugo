@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:  November 2018
 date:   2018-11-01
 categories: Newsletter

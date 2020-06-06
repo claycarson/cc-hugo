@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:      May 2018
 date:       2018-05-01
 summary:    

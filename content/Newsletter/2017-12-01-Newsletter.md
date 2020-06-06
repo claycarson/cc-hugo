@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:  December 2017
 date:   2017-12-01
 categories: Newsletter

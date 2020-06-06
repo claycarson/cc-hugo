@@ -1,0 +1,55 @@
+baseURL = ""
+title = "Clay Carson"
+theme = "cc"
+# enableGitInfo = true
+rssLimit = 10  # Maximum number of items in the RSS feed.
+enableEmoji = true  # Shorthand emojis in content files
+# googleAnalytics = "DISABLED"
+
+[author]
+  name = "Clay Carson"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # Metadata mostly used in document's head
+  # description = ""
+  # images = [""]
+
+  homeSubtitle = "This is where a description could go"
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # bgImg = ""  # Homepage background-image URL
+
+  # Toggling this option needs to rebuild SCSS, requires Hugo extended version
+  justifyContent = false  # Set "text-align: justify" to `.content`.
+    
+  [[params.social]]
+    name = "newsletter"
+    url  = "/newsletter"     
+    
+  [[params.social]]
+    name = "lists"
+    url  = "/lists"     
+    
+  [[params.social]]
+    name = "photos"
+    url  = "/photos"    
+
+[menu]
+
+#  [[menu.main]]
+#     name = "Newsletter"
+#     url = "/newsletter/"
+#   [[menu.main]]
+#     name = "Lists"
+#     url = "lists"
+#   [[menu.main]]
+#     name = "Photos"
+#     url = "photos"

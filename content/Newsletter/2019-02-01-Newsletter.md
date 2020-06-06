@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:  February 2019
 date:   2019-02-01
 categories: Newsletter

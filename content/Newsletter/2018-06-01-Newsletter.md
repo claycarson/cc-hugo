@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:  June 2018
 date:   2018-06-01
 categories: Newsletter

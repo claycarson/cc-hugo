@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:  August 2018
 date:   2018-08-01
 categories: Newsletter

@@ -1,184 +1,118 @@
-# Hello Friend NG
+# Hugo theme Hermit
 
-![Hello Friend NG](https://dsh.re/2bd45)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01a2e2de-d57d-4d89-8322-95685000e60f/deploy-status)](https://app.netlify.com/sites/hugo-theme-hermit/deploys)
 
-## General informations
+Hermit is a minimal and fast theme for Hugo. It's built for bloggers who want a simple and focused website.
 
-This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit). A lot of kudos for theier great work.
+![](https://github.com/Track3/hermit/raw/master/images/screenshot.png)
 
----
-## Table of Contents
-
-- [Features](#features)
-- [How to start](#how-to-start)
-- [How to configure](#how-to-configure)
-- [More](#more-things)
-  - [Built in shortcodes](#built-in-shortcodes)
-    - [image](#image)
-  - [Code highlighting](#code-highlighting)
-  - [Favicon](#favicon)
-- [Social Icons](#social-icons)
-- [Known issues](#known-issues)
-- [How to edit the theme](#how-to-edit-the-theme)
-- [Changelog](CHANGELOG.md)
-- [Sponsoring](#sponsoring)
-- [Licence](#licence)
-
----
 ## Features
 
-- Theming: **dark/light mode**, depending on your preferences (dark is default, but you can change it)
-- Great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
-- Nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
-- An easy way to modify the theme with Hugo tooling
-- Fully responsive
-- Support for social icons
+* A single-column layout and carefully crafted typography offers a great reading experience.
+* Navigations and functions are placed in the bottom bar which will hide when you scroll down.
+* Featured image is supported. It will be displayed as a dimmed background of the page.
+* Displays all of your posts on a single page, with one section per year, simple and compact.
+* Extremely lightweight and load fast. No third party framework, no unnecessary code.
+* All code fields feature syntax highlighting and a code-copy function
+* Responsive & Retina Ready. Scales gracefully from a big screen all the way down to the smallest mobile phone. Assets in vector format ensures that it looks sharp on high-resolution screens.
 
+**[Theme Demo](https://hugo-theme-hermit.netlify.com/)** (uses contents and config from the `exampleSite` folder)
 
-## How to start
+![](https://github.com/Track3/hermit/raw/master/images/hermit.png)
 
-You can download the theme manually by going to [https://github.com/rhazdon/hugo-theme-hello-friend-ng.git](https://github.com/rhazdon/hugo-theme-hello-friend-ng.git) and pasting it to `themes/hello-friend-ng` in your root directory.
+## Getting started
 
-You can also clone it directly to your Hugo folder:
+### Installation
 
-``` bash
-$ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+Run this command from the root of your Hugo directory:
+
+```bash
+$ git clone https://github.com/Track3/hermit.git themes/hermit
 ```
 
-If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. To do so, include it as a git submodule:
+Or, if your Hugo site is already in git, you can include this repository as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules). This makes it easier to update this theme. For this you need to run:
 
-``` bash
-$ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+```bash
+$ git submodule add https://github.com/Track3/hermit.git themes/hermit
 ```
 
-## How to configure
+Alternatively, if you are not familiar with git, you can download the theme as a `.zip` file, unzip the theme contents, and then move the unzipped source into your `themes` directory.
 
-The theme doesn't require any advanced configuration. Just copy the following config file.
-To see all possible configurations, [check the docs](docs/config.md).
-Note: There are more options to configure. Take a look into the `config.toml` in `exampleSite`.
+For more information, read the official [documentation](https://gohugo.io/themes/installing-and-using-themes/) of Hugo.
 
-``` toml
-baseurl      = "localhost"
-title        = "My Blog"
-languageCode = "en-us"
-theme        = "hello-friend-ng"
-paginate     = 10
+### Configuration
 
+The example config file can be found in the theme's `exampleSite` folder. You can just copy the `config.toml` to the root directory of your Hugo site. There are instructions in the example config file, feel free to change strings as you like to customize your website.
+
+#### Favicon
+
+Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these files, put them into your site's `static` folder:
+
+* android-chrome-192x192.png
+* android-chrome-512x512.png
+* apple-touch-icon.png
+* favicon-16x16.png
+* favicon-32x32.png
+* favicon.ico
+* mstile-150x150.png
+* safari-pinned-tab.svg
+* site.webmanifest
+
+#### Social icons
+
+The following icons are supported, please make sure the `name` filed is exactly one of these:
+
+| name            |             |              |           |
+| --------------- | ----------- | ------------ | --------- |
+| `email`         | `codepen`   | `facebook`   | `github`  |
+| `gitlab`        | `instagram` | `linkedin`   | `slack`   |
+| `stackoverflow` | `telegram`  | `twitter`    | `youtube` |
+| `shutterstock`  | `freepik`   | `adobestock` | `123rf`   |
+| `dreamstime`    | `dribbble`  | `behance`    | `paypal`  |
+| `twitch`        | `qq`        |              |           |
+
+If that's not enough, you can see [Overriding templates](#overriding-templates) section.
+
+### Manage content
+
+* Keep your regular pages in the `content` folder. To create a new page, run `hugo new page-title.md`
+* Keep your blog posts in the `content/posts` folder. To create a new post, run `hugo new posts/post-title.md`
+
+### More customizations
+
+#### Overriding templates
+
+In Hugo, layouts can live in either the project’s (root) or the themes’ layout folders, any template inside the root layout folder will override theme's layout that relative to it, for example: `layouts/_default/baseof.html` will override `themes/hermit/layouts/_default/baseof.html`. So, you can easily customize the theme without edit it directly, which makes updating the theme easier. Here's some common customizations:
+
+##### Customize social icons
+You can modify or add any svg icons in site's `layouts/partials/svg.html`.
+
+##### Customize comment system
+We only have built-in support for Disqus at the moment, if that doesn't fit your needs, you can just add html to site's `layouts/partials/comments.html`.
+
+##### Add custom analytics
+If you prefer to use different analytics system other than google analytics, then add them inside `layouts/partials/analytics.html`.
+
+#### Customize CSS
+
+If you'd like to customize theme color or fonts, you can simply override `assets/scss/_predefined.scss`, by simply copy it to site's root (keep the same relative path) then edit those variables. But keep in mind, you'll need **Hugo extended version** which has the ability to rebuild SCSS. You don't have to use extended version in production but in this case it's necessary to make sure the `resources` folder is committed and "up to date" (by running `hugo` or `hugo server` locally using the extended version). But anyway, always use the extended version if you can.
+
+For adding other custom CSS to the theme, you can assign an array of references in `config.toml` like following:
+```
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-
-  # Subtitle for home
-  homeSubtitle = "A simple and beautiful blog"
-
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
-
-  # Metadata mostly used in document's head
-  description = "My new homepage or blog"
-  keywords = "homepage, blog"
-  images = [""]
-
-  # Default theme "light" or "dark"
-  defaultTheme = "dark"
-
-[taxonomies]
-    category = "blog"
-    tag      = "tags"
-    series   = "series"
-
-[languages]
-  [languages.en]
-    title = "Hello Friend NG"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    readOtherPosts = "Read other posts"
-
-    [languages.en.params.logo]
-      logoText = "hello friend ng"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
-
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
+  customCSS = ["css/foo.css", "css/bar.css"]
 ```
+You may reference as many stylesheets as you want. Their paths need to be relative to the `static` folder or it can be a full URL for external resources.
 
-## More things
+#### Code injection
 
-### Built-in shortcodes
+You can inject any html code to every page's document head or right above the closing body tag. This makes it easier to add any html meta data, custom css/js, dns-prefetch etc. To do this you simply need to create a file at site's `layouts/partials/extra-head.html` or `layouts/partials/extra-foot.html`, code inside will be injected to every page.
 
-Of course you are able to use all default shortcodes from hugo (https://gohugo.io/content-management/shortcodes/).
+## Acknowledgments
 
-#### image
+* [normalize.css](https://necolas.github.io/normalize.css/) - [MIT](https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+* [animate.css](https://daneden.github.io/animate.css/) - [MIT](https://github.com/daneden/animate.css/blob/master/LICENSE)
+* [feather](https://feathericons.com/) - [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
+* [code-copy.js](assets/js/code-copy.js) - [Tom Spencer](https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/)
 
-Properties:
-
-  - `src` (required)
-  - `alt` (optional)
-  - `position` (optional, default: `left`, options: [`left`, `center`, `right`])
-  - `style`
-
-Example:
-
-``` golang
-{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
-```
-
-### Code highlighting
-
-Supported languages: [Take a look here](https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+abap+actionscript+ada+apacheconf+apl+applescript+c+arff+asciidoc+asm6502+csharp+autohotkey+autoit+bash+basic+batch+bison+brainfuck+bro+cpp+aspnet+arduino+cil+coffeescript+clojure+ruby+csp+css-extras+d+dart+diff+markup-templating+docker+eiffel+elixir+elm+lua+erb+erlang+fsharp+flow+fortran+gcode+gedcom+gherkin+git+glsl+gml+go+graphql+groovy+less+handlebars+haskell+haxe+hcl+http+hpkp+hsts+ichigojam+icon+inform7+ini+io+j+java+scala+php+javastacktrace+jolie+n4js+markdown+json+julia+keyman+kotlin+latex+crystal+scheme+liquid+lisp+livescript+lolcode+makefile+django+matlab+mel+mizar+monkey+n1ql+typescript+nand2tetris-hdl+nasm+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+perl+php-extras+sql+powershell+processing+prolog+properties+protobuf+scss+puppet+pure+python+q+qore+r+jsx+renpy+reason+vala+rest+rip+roboconf+textile+rust+plsql+sass+stylus+smalltalk+smarty+soy+sas+twig+swift+yaml+tcl+haml+toml+tt2+pug+tsx+visual-basic+vbnet+velocity+verilog+vhdl+vim+wasm+wiki+xeora+xojo+xquery+tap)
-
-By default the theme is using PrismJS to color your code syntax. All you need to do is to wrap you code like this:
-
-<pre>
-``` html
-  // your code here
-```
-</pre>
-
-### Favicon
-
-Check the [docs](docs/favicons.md).
-
-## Social Icons:
-
-Take a look into this [list](docs/svgs.md)
-
-If you need another one, just open an issue or create a pull request with your wished icon. :)
-
-## Known issues
-
-There is a bug in Hugo that sometimes causes the main page not to render correctly. The reason is an empty taxonomy part.
-Related issue tickets: [!14](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/14) [!59](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/59).
-
-Either you comment it out completely or you write the following in
-
-``` toml
-[taxonomies]
-  tag      = "tags"
-  category = "categories"
-```
-
-## How to edit the theme
-
-Just edit it. You don't need any node stuff. ;)
-
-## Sponsoring
-
-If you like my work and if you think this project is worth to support it, just <br />
-<a href="https://www.buymeacoffee.com/djordjeatlialp" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
-
-## Licence
-
-Copyright © 2019-2020 Djordje Atlialp
-
-The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
+Thanks!

@@ -1,5 +1,4 @@
 ---
-layout: newsletter
 title:  March 2020
 date:   2020-03-01
 categories: Newsletter
