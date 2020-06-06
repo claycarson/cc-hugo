@@ -125,3 +125,13 @@ disableHugoGeneratorInject = false
     identifier = "newsletter"
     name       = "Newsletter"
     url        = "newsletter/"
+    
+  [[menu.main]]
+    identifier = "lists"
+    name       = "Lists"
+    url        = "lists/"
+    
+  [[menu.main]]
+    identifier = "photos"
+    name       = "Photos"
+    url        = "photos/"
