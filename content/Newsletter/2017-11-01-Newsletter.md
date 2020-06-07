@@ -6,8 +6,6 @@ categories: Newsletter
 draft: true
 ---
 
-# November 2017
-
 ## Introduction
 
 This newsletter is a collection of things I have found in the last month that in some way made me better or that I found interesting enough to share.

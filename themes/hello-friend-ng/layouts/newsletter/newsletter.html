@@ -17,7 +17,7 @@
  -->
 
         <article>
-            <p><h1><a href="/newsletter">Newsletter</a></h1>
+            <p><h1>Newsletter</h1>
 I started this newsletter in January of 2018. The motivation was selfish; I was bookmarking too many articles and links that I didn't get around to reading. Filtering out my favorites to share helps me keep that list manageable. The full archive of previous editions is available <a href="#archive">below</a>.</p>
 		{{ partial "subscribe-form.html" }}
 		<hr>
@@ -32,7 +32,6 @@ I started this newsletter in January of 2018. The motivation was selfish; I was 
 			{{- end }}
 		</div>
 		<hr>
-		</div>
 		<main class="posts">
 		<h1><a id="archive">Archive</a></h1>
 		{{- range .Data.Pages.GroupByDate "2006" }}
