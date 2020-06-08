@@ -1,16 +1,14 @@
 ---
 title: Freel at Last, Freel at Last, Thank God Almighty, She’s a Freel at Last
 date: 2018-11-06T09:50:22+00:00
-categories: 
-  
-  - snapshot
+categories: snappy
 tags:
   - NOLA
   - travel
   - vacation
   - wedding
 format: gallery
-feature: https://via.placeholder.com/500
+featured: https://via.placeholder.com/500
 published: false
 ---
 

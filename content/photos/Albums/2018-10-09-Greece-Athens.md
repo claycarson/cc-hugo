@@ -1,5 +1,4 @@
 ---
-layout:     album
 title:      Athens, Greece
 date:       2018-10-07
 summary:    
@@ -12,7 +11,7 @@ tags:
   - travel
   - vacation
 published: true
-feature: https://files.claycarson.net/photos/album/greece-2018/athens/greece-11.jpg
+cover: https://files.claycarson.net/photos/album/greece-2018/athens/greece-11.jpg
 permalink:  /photos/album/greece/athens
 ---
 
