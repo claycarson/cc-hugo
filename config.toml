@@ -124,14 +124,14 @@ disableHugoGeneratorInject = false
   [[menu.main]]
     identifier = "newsletter"
     name       = "Newsletter"
-    url        = "newsletter/"
+    url        = "/newsletter"
     
   [[menu.main]]
     identifier = "lists"
     name       = "Lists"
-    url        = "lists/"
+    url        = "/lists"
     
   [[menu.main]]
     identifier = "photos"
     name       = "Photos"
-    url        = "photos/"
+    url        = "/photos"
