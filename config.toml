@@ -13,6 +13,26 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 # googleAnalytics = ""
 # disqusShortname = ""
 
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
